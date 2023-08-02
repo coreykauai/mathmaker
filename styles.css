@@ -2,42 +2,72 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #fdcb99, #70bff8);
-}
-* {
-  box-sizing: border-box;
-}
-body {
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  margin: 0;
+  font-size: 35px;
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+  color: rgb(50, 50, 50);
+  outline-color: solid 2px #222222;
+}
+
+.solar {
+  display: flex;
+  height: 40px;
+  width: 120px;
+  border: solid black 3px;
+}
+
+.pan {
+  border: solid 1px black;
+  height: 35px;
+  background-color: #5c5b5b;
+  width: 43px;
+}
+
 .calculator {
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, #fffbfb, #5c5b5b);
-  padding: 40px;
+  padding: 20px 40px 40px;
   gap: 10px;
   width: 400px;
   height: 600px;
-  border: gray solid 2px;
+  border: gray solid 5px;
+  border-bottom: rgb(69, 69, 69) solid 15px;
+  border-right: rgb(69, 69, 69) solid 15px;
   border-radius: 5px;
 }
+
 .row {
   display: flex;
   flex: 1;
   gap: 10px;
 }
+
 .btn {
   flex: 1;
   border-radius: 5px;
-  border: gray solid 3px;
+  border: rgb(70, 70, 70) solid 3px;
   cursor: pointer;
   font-family: sans-serif;
   font-size: 25px;
-  background-color: #d9d7d7;
 }
+
 .btn:hover {
   background-color: white;
 }
@@ -45,12 +75,14 @@ body {
 .button-wide {
   flex: 2.25;
 }
+
 .display {
   height: 100px;
-  border: gray solid 3px;
+  border: rgb(134, 134, 134) solid 5px;
   font-size: 75px;
 }
 
-.operator:visited {
-  background-color: white;
+.operator {
+  padding-bottom: 5px;
+  font-size: 30px;
 }

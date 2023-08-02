@@ -52,9 +52,10 @@ numBtns.forEach((btn) => {
 operatorBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     operator = e.target.textContent;
+    updateDisplay(num + operator);
     if (total && num) {
       total = operate(total, operator, num);
-      updateDisplay(total);
+      updateDisplay(total + operator);
       num = "";
     } else if (num) {
       total = num;
@@ -78,15 +79,33 @@ equalsBtn.addEventListener("click", () => {
   }
 });
 
-ACBtn.addEventListener("click", (e) => {
+ACBtn.addEventListener("click", () => {
   displayScreen.value = "";
   total = "";
   num = "";
   operator = "";
 });
 
-negBtn.addEventListener("click", (e) => {
+negBtn.addEventListener("click", () => {
   if (num) {
     num = -Math.abs(num);
   }
 });
+
+// percentBtn.addEventListener("click", () => {
+//   if (num1 && percentBtn && num2) {
+//     total = ((num1 / num2) * 100).toFixed(3);
+//     updateDisplay(total);
+//   } else if (num && percentBtn) {
+//     updateDisplay((num * 100) / num);
+//   }
+//updateDisplay((num / num) * 100);
+// updateDisplay((num * 100) / 10000);
+// });
+// percentBtn.addEventListener("click", () => {
+//   function percentage(percent, totals) {
+//     return ((percent / 100) * totals).toFixed(2);
+//   }
+//   let total = percentage(num);
+//   updateDisplay(total);
+// });

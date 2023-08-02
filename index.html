@@ -7,20 +7,33 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <body>
+    <style>
+      body {
+        background-image: url(jeremy-thomas-4dpAqfTbvKA-unsplash.jpg);
+      }
+    </style>
+    <div class="space">
       <div class="calculator">
+        <div class="top">
+          <p class="name">MATHMAKER</p>
+          <div class="solar">
+            <div class="pan"></div>
+            <div class="pan"></div>
+            <div class="pan"></div>
+          </div>
+        </div>
         <input class="display" />
         <div class="row">
-          <button class="AC btn">AC</button>
+          <button class="AC btn button-wide">AC</button>
           <button class="neg btn">+/-</button>
-          <button class="percent btn">%</button>
-          <button class="operator btn">/</button>
+          <!-- <button class="percent btn">%</button> -->
+          <button class="operator btn">÷</button>
         </div>
         <div class="row">
           <button class="number btn">7</button>
           <button class="number btn">8</button>
           <button class="number btn">9</button>
-          <button class="operator btn">*</button>
+          <button class="operator btn">x</button>
         </div>
         <div class="row">
           <button class="number btn">4</button>
@@ -40,8 +53,8 @@
           <button class="equals btn">=</button>
         </div>
       </div>
+    </div>
 
-      <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
   </body>
 </html>
